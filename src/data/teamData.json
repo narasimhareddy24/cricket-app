@@ -1,0 +1,52 @@
+{
+    "teams":[
+        {
+        "id":1,
+        "team_name":"India",
+        "players":[
+            { "name": "Dhoni", "age": 40 },
+        { "name": "Kohli", "age": 35 },
+        { "name": "Rohit", "age": 37 },
+        { "name": "Gill", "age": 25 },
+        { "name": "Rahul", "age": 29 },
+        { "name": "Hardik", "age": 26 },
+        { "name": "Dube", "age": 30 },
+        { "name": "Pant", "age": 33 },
+        { "name": "Sunil", "age": 29 },
+        { "name": "Sachin", "age": 41 },
+        { "name": "Gambhir", "age": 20 }
+
+        ]
+
+    },
+    {
+        "id":2,
+        "team_name":"World11",
+        "players":[
+            { "name": "Pat", "age": 40 },
+        { "name": "Kane", "age": 35 },
+        { "name": "Warner", "age": 37 },
+        { "name": "Finch", "age": 25 },
+        { "name": "Boult", "age": 29 },
+        { "name": "Head", "age": 26 },
+        { "name": "Starc", "age": 30 },
+        { "name": "Smith", "age": 33 },
+        { "name": "Buttler", "age": 29 },
+        { "name": "Southee", "age": 41 },
+        { "name": "Watson", "age": 20 }
+        ]
+    }
+
+        
+    ],
+"venue":"Chinnaswami",
+"umpire":[{
+    "id":1,
+    "name":"Nithin Menon",
+    "experience":5
+},{
+    "id":2,
+    "name":"Richrad",
+    "experience":6
+}]
+}

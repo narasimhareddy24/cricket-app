@@ -1,0 +1,47 @@
+.series-container {
+
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #464646;
+    font-weight: bold;
+}
+
+.match-container {
+
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 10px;
+
+}
+
+
+.score-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+
+
+}
+
+.image-container {
+    width: 30px;
+    height: 10px;
+    margin-right: 5px;
+
+
+}
+
+.team-container {
+    margin-top: 10px;
+}
+
+.status-container {
+
+    display: flex;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #a36501;
+
+}

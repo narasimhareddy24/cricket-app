@@ -1,0 +1,14 @@
+.home-container{
+  
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        /* margin-top: 51px; */
+        align-items: center;
+        height: 80vh;
+    
+
+}
+.submit-button{
+    margin-top: 20px;
+}
