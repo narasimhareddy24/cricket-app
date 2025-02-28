@@ -1,0 +1,96 @@
+.status-container {
+
+    display: flex;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #a36501;
+
+}
+
+.head-container {
+    display: flex;
+    justify-content: space-between;
+    background: #4a4a4a;
+    color: #fff;
+    padding: 8px 10px;
+
+}
+
+/* 
+.bbody-container {
+    display: flex;
+    background: #ecebeb;
+    justify-content: space-between;
+    padding: 8px 6px;
+    font-size: 14px;
+    color: #666;
+
+}
+
+.batter-container {
+    display: flex;
+    flex-grow: 0.5;
+
+} */
+
+.wickets-container {
+    background: #ecebeb;
+    font-size: 14px;
+    color: #666;
+    padding: 8px 6px;
+}
+
+/* 
+.bowler-container {
+    display: flex;
+    background: #ecebeb;
+    justify-content: space-between;
+    padding: 8px 6px;
+    font-size: 14px;
+    color: #666;
+
+}
+
+.bowlerb-container {
+    display: flex;
+    flex-grow: 0.5;
+
+} */
+
+.powerplay-container {
+    display: flex;
+    background: #ecebeb;
+    justify-content: space-between;
+    padding: 8px 6px;
+    font-size: 14px;
+    color: #666;
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th,
+td {
+    border: 0px solid #ddd;
+    padding: 8px 6px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.scorecard-container {
+    width: 60%;
+
+    margin: 0 auto;
+
+    background: #fff;
+
+    padding: 20px;
+
+}
