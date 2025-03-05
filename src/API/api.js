@@ -14,10 +14,10 @@ async function fetchMatches() {
     let response = await axios.request(options);
     console.log("API Response:", response.data);
 
-    return response.data; 
+    return response.data;
   } catch (error) {
     console.error("Error fetching data:", error);
-    return null; 
+    return null;
   }
 }
 

@@ -1,40 +1,47 @@
 import React from "react";
-import "../styles/scorecard.css";
+import { Table } from "@mantine/core";
 
 function BatsmenDetails({ batsmen }) {
     const batsmenArray = batsmen ? Object.values(batsmen) : [];
 
+    const rows = batsmenArray.length > 0 ? (
+        batsmenArray.map((batsman, index) => (
+            <Table.Tr key={index}>
+                <Table.Td style={{ color: "blue", fontWeight: 600 }}>
+                    {batsman?.batName || "N/A"}
+                </Table.Td>
+                <Table.Td>{batsman?.outDesc || "Not Out"}</Table.Td>
+                <Table.Td>{batsman?.runs || 0}</Table.Td>
+                <Table.Td>{batsman?.balls || 0}</Table.Td>
+                <Table.Td>{batsman?.fours || 0}</Table.Td>
+                <Table.Td>{batsman?.sixes || 0}</Table.Td>
+                <Table.Td>{batsman?.strikeRate?.toFixed(2) || "0.00"}</Table.Td>
+            </Table.Tr>
+
+        ))
+    ) : (
+        <Table.Tr>
+            <Table.Td colSpan="6" style={{ textAlign: "center" }}>
+                No batting data available
+            </Table.Td>
+        </Table.Tr>
+    );
+
     return (
-        <table className="bbody-container">
-            <thead>
-                <tr>
-                    <th>Batter</th>
-                    <th>R</th>
-                    <th>B</th>
-                    <th>4s</th>
-                    <th>6s</th>
-                    <th>SR</th>
-                </tr>
-            </thead>
-            <tbody>
-                {batsmenArray.length > 0 ? (
-                    batsmenArray.map((batsman, index) => (
-                        <tr key={index}>
-                            <td>{batsman?.batName || "N/A"}</td>
-                            <td>{batsman?.runs || 0}</td>
-                            <td>{batsman?.balls || 0}</td>
-                            <td>{batsman?.fours || 0}</td>
-                            <td>{batsman?.sixes || 0}</td>
-                            <td>{batsman?.strikeRate?.toFixed(2) || "0.00"}</td>
-                        </tr>
-                    ))
-                ) : (
-                    <tr>
-                        <td colSpan="6">No batting data available</td>
-                    </tr>
-                )}
-            </tbody>
-        </table>
+        <Table stickyHeader stickyHeaderOffset={60}>
+            <Table.Thead>
+                <Table.Tr>
+                    <Table.Th>Batter</Table.Th>
+                    <Table.Th> </Table.Th>
+                    <Table.Th>R</Table.Th>
+                    <Table.Th>B</Table.Th>
+                    <Table.Th>4s</Table.Th>
+                    <Table.Th>6s</Table.Th>
+                    <Table.Th>SR</Table.Th>
+                </Table.Tr>
+            </Table.Thead>
+            <Table.Tbody>{rows}</Table.Tbody>
+        </Table>
     );
 }
 

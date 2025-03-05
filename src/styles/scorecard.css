@@ -13,6 +13,7 @@
     background: #4a4a4a;
     color: #fff;
     padding: 8px 10px;
+    margin-top: 20px;
 
 }
 
@@ -34,10 +35,14 @@
 } */
 
 .wickets-container {
+    display: flex;
+    align-items: flex-start;
     background: #ecebeb;
     font-size: 14px;
     color: #666;
     padding: 8px 6px;
+    margin-top: 20px;
+
 }
 
 /* 
@@ -81,7 +86,9 @@ td {
 }
 
 th {
+
     background-color: #f4f4f4;
+
 }
 
 .scorecard-container {
@@ -93,4 +100,70 @@ th {
 
     padding: 20px;
 
+}
+
+.strike-Rate {
+    display: flex;
+    flex-grow: 0.5;
+    align-items: flex-end;
+}
+
+.toss-container {
+
+    display: flex;
+
+    justify-content: stretch;
+    margin-top: 10px;
+}
+
+/* 
+.match-label,
+.match-details,
+.toss-label,
+.toss-details {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+} */
+
+
+.match-info-panel {
+    border: 0px solid #e0e0e0;
+
+    padding: 16px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+
+.info-row {
+    border-bottom: 1px solid #eee;
+    padding: 12px 0;
+}
+
+/* 
+.info-row:last-child {
+    border-bottom: none;
+} */
+
+
+.match-label,
+.toss-label {
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+
+.match-details,
+.toss-details {
+    display: flex;
+    justify-content: flex-start;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.4;
 }

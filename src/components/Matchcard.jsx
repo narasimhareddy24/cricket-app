@@ -8,6 +8,7 @@ import afgImg from '../assets/afghanistan.webp';
 import nzImg from '../assets/new-zealand.webp';
 import pakImg from '../assets/pakistan.webp';
 import saImg from '../assets/south-africa.webp';
+import { useNavigate } from 'react-router-dom';
 
 const getTeamLogo = (teamName) => {
   const teamLogos = {
@@ -27,22 +28,29 @@ const getTeamLogo = (teamName) => {
 };
 
 function Matchcard({ matchdata }) {
+  const navigate = useNavigate();
+
   if (!matchdata?.matchInfo) {
     return <div>No match data available</div>;
   }
 
-  const { seriesName, matchDesc, matchFormat, status, team1, team2 } = matchdata.matchInfo;
+  const { matchId, seriesName, matchDesc, matchFormat, status, team1, team2 } = matchdata.matchInfo;
   const team1Score = matchdata?.matchScore?.team1Score?.inngs1 || {};
   const team2Score = matchdata?.matchScore?.team2Score?.inngs1 || {};
 
-  return (
-    <Card shadow="sm" padding="xs" radius="md" withBorder className="match-card">
+  console.log("Rendering Matchcard with matchId:", matchId);
 
+  const handleClick = (id) => {
+    console.log("Navigating to matchId:", id);
+    navigate(`/scorecard/${id}`);
+  };
+
+  return (
+    <Card shadow="sm" padding="xs" radius="md" withBorder className="match-card" onClick={() => handleClick(matchId)}>
       <div className='series-container'>
         <div>{seriesName} {matchDesc}</div>
         <div><Badge>{matchFormat}</Badge></div>
       </div>
-
 
       <div className='match-container'>
         <div className='image-container'>
@@ -54,7 +62,6 @@ function Matchcard({ matchdata }) {
         </div>
       </div>
 
-
       <div className='match-container'>
         <div className='image-container'>
           <Image height={14} src={getTeamLogo(team2?.teamName)} alt={team2?.teamName} />
@@ -64,7 +71,6 @@ function Matchcard({ matchdata }) {
           {team2Score?.runs ?? "--"} - {team2Score?.wickets ?? "--"} ({team2Score?.overs ?? "--"})
         </div>
       </div>
-
 
       <div className='status-container'>
         {status || "Match status unavailable"}
