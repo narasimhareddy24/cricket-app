@@ -7,7 +7,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { Modal } from '@mantine/core';
 import { useNavigate } from "react-router-dom";
 import teamData from "../data/teamData.json";
-import fetchMatches from "../API/api.js";
+import { fetchMatches, fetchStats } from "../API/api.js";
 
 function Home() {
   const [value, setValue] = useState("");

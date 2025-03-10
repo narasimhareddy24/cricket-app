@@ -78,3 +78,52 @@ nav a:hover {
   margin-top: 70px;
   padding: 20px;
 }
+
+/* App.css */
+/* Base styles for all screens */
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Responsive media queries */
+@media (max-width: 1024px) {
+  /* For tablets and small laptops */
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* For tablets */
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* For mobile devices */
+  .container {
+    width: 100%;
+    padding: 5px;
+  }
+  body {
+    font-size: 12px;
+  }
+}

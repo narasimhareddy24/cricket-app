@@ -1,75 +1,150 @@
+/* General styles */
 .status-container {
-
     display: flex;
     font-size: 16px;
     margin-top: 10px;
     color: #a36501;
-
 }
 
+.scorecard-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+}
 .head-container {
     display: flex;
     justify-content: space-between;
     background: #4a4a4a;
     color: #fff;
     padding: 8px 10px;
-
-}
-
-.bbody-container {
-    display: flex;
-    background: #ecebeb;
-    justify-content: space-between;
-    padding: 8px 6px;
-    font-size: 14px;
-    color: #666;
-
-}
-
-.batter-container {
-    display: flex;
-    flex-grow: 0.5;
-
+    margin-top: 20px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .wickets-container {
+    display: flex;
+    align-items: flex-start;
     background: #ecebeb;
     font-size: 14px;
     color: #666;
     padding: 8px 6px;
+    margin-top: 20px;
+    width: 100%;
 }
 
-.bowler-container {
-    display: flex;
-    background: #ecebeb;
-    justify-content: space-between;
-    padding: 8px 6px;
-    font-size: 14px;
-    color: #666;
-
-}
-
-.bowlerb-container {
-    display: flex;
-    flex-grow: 0.5;
-
-}
-
-.powerplay-container {
+/* Ensure containers are fully responsive */
+.bbody-container, .powerplay-container, .toss-container {
     display: flex;
     background: #ecebeb;
     justify-content: space-between;
     padding: 8px 6px;
     font-size: 14px;
     color: #666;
-
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-.toss-container {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+/* ✅ Mobile responsiveness */
+@media (max-width: 768px) {
+    .scorecard-container {
+        padding: 10px;
+    }
+
+    .head-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .wickets-container {
+        flex-direction: column; /* Stack vertically */
+        align-items: center; /* Center items */
+        text-align: center; /* Center text */
+        font-size: 13px;
+    }
+
+    .bbody-container,
+    .powerplay-container,
+    .toss-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 300px) {
+    .scorecard-container {
+        padding: 5px;
+    }
+
+    .head-container {
+        padding: 8px; /* Reduce padding */
+        font-size: 13px; /* Smaller font size */
+    }
+
+    .wickets-container {
+        padding: 6px; /* Reduce padding */
+        font-size: 12px; 
+    }
+
+    .bbody-container,
+    .powerplay-container,
+    .toss-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Table adjustments for mobile */
+table {
+    width: 100%;
+    border-collapse: collapse;
     margin-top: 10px;
-    flex-direction: row;
+}
 
+th,
+td {
+    border: 0px solid #ddd;
+    padding: 8px 6px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+@media (max-width: 480px) {
+    th,
+    td {
+        padding: 6px 4px;
+        font-size: 12px;
+    }
+}
+
+/* Tabs styling */
+.tabs-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tab {
+    font-size: 14px;
+    padding: 8px 16px;
+}
+
+@media (max-width: 480px) {
+    .tabs-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
 }

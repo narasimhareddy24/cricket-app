@@ -70,38 +70,36 @@ function Scorecard() {
 
 
                 <Tabs.Panel value="match-info">
-                    <Grid gutter="lg" className="match-info-panel">
+                <Grid gutter="lg" className="match-info-panel">
+  <Grid.Col span={{ base: 12, sm: 12, md: 12 }} className="info-row">
+    <Grid>
+      <Grid.Col span={{ base: 12, sm: 4, md: 4 }}>
+        <div className="match-label">Match</div>
+      </Grid.Col>
+      <Grid.Col span={{ base: 12, sm: 8, md: 8 }}>
+        <div className="match-details">
+          {scorecard?.scoreCard[0]?.batTeamDetails?.batTeamShortName} vs
+          {scorecard?.scoreCard[0]?.bowlTeamDetails?.bowlTeamShortName},
+          {scorecard?.matchHeader?.matchDescription},
+          {scorecard?.matchHeader?.seriesDesc}
+        </div>
+      </Grid.Col>
+    </Grid>
+  </Grid.Col>
 
-                        <Grid.Col span={12} className="info-row">
-                            <Grid>
-                                <Grid.Col span={4}>
-                                    <div className="match-label">Match</div>
-                                </Grid.Col>
-                                <Grid.Col span={8}>
-                                    <div className="match-details">
-                                        {scorecard?.scoreCard[0]?.batTeamDetails?.batTeamShortName} vs
-                                        {scorecard?.scoreCard[0]?.bowlTeamDetails?.bowlTeamShortName},
-                                        {scorecard?.matchHeader?.matchDescription},
-                                        {scorecard?.matchHeader?.seriesDesc}
-                                    </div>
-                                </Grid.Col>
-                            </Grid>
-                        </Grid.Col>
-
-
-                        <Grid.Col span={12} className="info-row">
-                            <Grid>
-                                <Grid.Col span={4}>
-                                    <div className="toss-label">Toss</div>
-                                </Grid.Col>
-                                <Grid.Col span={8}>
-                                    <div className="toss-details">
-                                        {scorecard?.matchHeader?.tossResults?.tossWinnerName} won the toss.
-                                    </div>
-                                </Grid.Col>
-                            </Grid>
-                        </Grid.Col>
-                    </Grid>
+  <Grid.Col span={{ base: 12, sm: 12, md: 12 }} className="info-row">
+    <Grid>
+      <Grid.Col span={{ base: 12, sm: 4, md: 4 }}>
+        <div className="toss-label">Toss</div>
+      </Grid.Col>
+      <Grid.Col span={{ base: 12, sm: 8, md: 8 }}>
+        <div className="toss-details">
+          {scorecard?.matchHeader?.tossResults?.tossWinnerName} won the toss.
+        </div>
+      </Grid.Col>
+    </Grid>
+  </Grid.Col>
+</Grid>
                 </Tabs.Panel>
 
                 <Tabs.Panel value="scorecard">
@@ -125,7 +123,7 @@ function Scorecard() {
                             alignitems: "start",
                             justifycontent: "flex-start"
                         }}>
-                            {scorecard?.scoreCard[0]?.wicketsData
+                          {scorecard?.scoreCard[0]?.wicketsData
                                 ? Object.values(scorecard.scoreCard[0].wicketsData)
                                     .map((wicket) => `${wicket.wktRuns}/${wicket.wktNbr}`)
                                     .join(", ")

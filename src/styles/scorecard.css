@@ -6,15 +6,14 @@
     color: #a36501;
 
 }
-
 .head-container {
-    display: flex;
-    justify-content: space-between;
-    background: #4a4a4a;
-    color: #fff;
-    padding: 8px 10px;
-    margin-top: 20px;
-
+  display: flex;
+  justify-content: space-between;
+  background: #4a4a4a;
+  color: #fff;
+  padding: 8px 10px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 /* 
@@ -35,14 +34,14 @@
 } */
 
 .wickets-container {
-    display: flex;
-    align-items: flex-start;
-    background: #ecebeb;
-    font-size: 14px;
-    color: #666;
-    padding: 8px 6px;
-    margin-top: 20px;
-
+  display: flex;
+  align-items: flex-start;
+  background: #ecebeb;
+  font-size: 14px;
+  color: #666;
+  padding: 8px 6px;
+  margin-top: 20px;
+  width: 100%;
 }
 
 /* 
@@ -92,13 +91,10 @@ th {
 }
 
 .scorecard-container {
-    width: 60%;
-
-    margin: 0 auto;
-
-    background: #fff;
-
-    padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
 
 }
 
@@ -166,4 +162,93 @@ th {
     color: #666;
     font-size: 0.95rem;
     line-height: 1.4;
+}
+
+/* Base styles (applies to all screens) */
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+  }
+  
+@media (max-width: 480px) {
+  .scorecard-container {
+      padding: 5px;
+  }
+
+  .head-container {
+      padding: 8px; /* Reduce padding */
+      font-size: 13px; /* Smaller font size */
+  }
+
+  .wickets-container {
+      padding: 6px; /* Reduce padding */
+      font-size: 12px; 
+  }
+
+  .bbody-container,
+  .powerplay-container,
+  .toss-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+  }
+}
+
+/* Table adjustments for mobile */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  border: 0px solid #ddd;
+  padding: 8px 6px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+@media (max-width: 480px) {
+  th,
+  td {
+      padding: 6px 4px;
+      font-size: 12px;
+  }
+}
+
+/* Tabs styling */
+.tabs-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tab {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+@media (max-width: 480px) {
+  .tabs-list {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .tab {
+      font-size: 12px;
+      padding: 6px 12px;
+  }
 }

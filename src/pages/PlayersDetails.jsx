@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import teamData from "../data/teamData.json";
 import { Table, Tabs } from "@mantine/core";
+import "../styles/playerDetails.css";
 
 function PlayerDetails() {
   const { teamName } = useParams();

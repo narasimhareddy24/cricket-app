@@ -1,0 +1,85 @@
+/* Status and Rankings Styles */
+
+/* Tabs List */
+.tabs-list {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    margin-bottom: var(--mantine-spacing-md);
+}
+
+/* Individual Tabs */
+.tab {
+    font-weight: 500;
+    transition: color 100ms ease;
+    color: var(--mantine-color-gray-7);
+    padding: 10px 20px;
+    
+    cursor: pointer;
+}
+
+/* Active Tab */
+.tab[data-active] {
+    color: var(--mantine-color-black);
+     /* background-color: var(--mantine-color-gray-1); */
+} 
+
+/* Floating Indicator */
+.indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    /* background-color: var(--mantine-color-white); */
+    border-radius: var(--mantine-radius-md);
+    border: 1px solid var(--mantine-color-gray-2);
+    box-shadow: var(--mantine-shadow-sm);
+    transition: transform 200ms ease, width 200ms ease;
+}
+
+/* Format Container */
+.format-container {
+    margin-top: 10px;
+}
+
+/* Stats Table */
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.stats-table th,
+.stats-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.stats-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.stats-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Player Row */
+.player-row td {
+    font-size: 14px;
+}
+   
+@media (max-width: 480px) {
+    .stats-table th,
+    .stats-table td {
+      padding: 8px; /* Smaller padding for mobile */
+      /* font-size: 12px; /* Smaller font size for mobile */
+    } 
+   
+
+ 
+    .tabs-list {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}

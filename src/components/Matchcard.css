@@ -60,3 +60,72 @@
     margin-top: 10px;
 
 }
+
+/* Matchcard.css */
+.match-card {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  .series-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #464646;
+    font-weight: bold;
+  }
+  
+  .match-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: stretch;
+    margin-top: 10px;
+  }
+  
+  .score-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+  
+  .image-container {
+    width: 30px;
+    height: 10px;
+    margin-right: 5px;
+  }
+  
+  .team-container {
+    margin-top: 10px;
+  }
+  
+  .status-container {
+    display: flex;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #a36501;
+  }
+ 
+@media (max-width: 480px) {
+    .match-card {
+      width: 100%; /* Full width on mobile */
+      padding: 5px; /* Reduce padding for mobile */
+    }
+  
+    .series-container {
+      font-size: 10px; /* Smaller font size for mobile */
+    }
+  
+    .status-container {
+      font-size: 12px; /* Smaller font size for mobile */
+    }
+  
+    .match-container {
+      flex-direction: column; /* Stack team details vertically */
+      align-items: center;
+    }
+  
+    .score-container {
+      justify-content: center; /* Center score on mobile */
+    }
+  }

@@ -12,3 +12,29 @@
 .submit-button{
     margin-top: 20px;
 }
+
+
+/* homestyles.css */
+.home-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+  }
+  
+  .submit-button {
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .home-container {
+      height: auto; /* Adjust height for mobile */
+      padding: 20px;
+    }
+  
+    .submit-button {
+      width: 100%; /* Full width buttons on mobile */
+      margin-top: 10px;
+    }
+  }

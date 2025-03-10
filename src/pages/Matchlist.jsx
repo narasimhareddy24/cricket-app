@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import fetchMatches from "../API/api";
+import {fetchMatches} from "../API/api";
 import Matchcard from "../components/Matchcard";
 import { Loader, Grid } from "@mantine/core";
 import Navbar from "../components/Navbar";
@@ -67,12 +67,12 @@ const MatchList = () => {
           </div>
         ) : matches.length > 0 ? (
           <Grid>
-            {matches.map((match, index) => (
-              <Grid.Col key={index} span={4}>
-                <Matchcard matchdata={match} />
-              </Grid.Col>
-            ))}
-          </Grid>
+  {matches.map((match, index) => (
+    <Grid.Col key={index} span={{ base: 12, sm: 6, md: 4 }}>
+      <Matchcard matchdata={match} />
+    </Grid.Col>
+  ))}
+</Grid>
         ) : (
           <p>No matches found.</p>
         )}

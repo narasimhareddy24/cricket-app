@@ -6,3 +6,30 @@
     width: 100%;
     margin-bottom: 20px;
 }
+/* Navbar.css */
+.navbar-container {
+    background-color: #f8f9fa;
+    padding: 10px;
+    height: auto; /* Adjust height for mobile */
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: center; /* Center items on smaller screens */
+  }
+  
+  .navbar-container a {
+    margin: 5px 10px; /* Adjust spacing for mobile */
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+  
+  @media (max-width: 480px) {
+    .navbar-container {
+      flex-direction: column; /* Stack items vertically on mobile */
+      align-items: center;
+    }
+    .navbar-container a {
+        margin: 5px 0; /* Reduce margin for mobile */
+        font-size: 12px; /* Smaller font size for mobile */
+      }
+  }
