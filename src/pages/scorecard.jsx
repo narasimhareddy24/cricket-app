@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../styles/scorecard.css";
-import BatsmenDetails from "../components/Batsmendetails";
+import BatsmenDetails from "../components/BatsmenDetails";
 import BowlersDetails from "../components/BowlersDetails";
 import { useParams } from 'react-router-dom';
 import { Tabs, Grid, Table } from "@mantine/core";
