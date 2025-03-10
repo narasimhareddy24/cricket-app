@@ -1,7 +1,8 @@
 import React, { useState, useRef } from "react";
 import { FloatingIndicator, Tabs } from "@mantine/core";
 import Status from "./Status.jsx";
-import "../styles/status.css";
+import "../styles/Status.css"; 
+
 
 function Rankings() {
   const [type, setType] = useState("batsmen"); // Default to batting
