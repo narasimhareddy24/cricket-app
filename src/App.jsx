@@ -8,7 +8,7 @@ import MatchList from "./pages/Matchlist.jsx";
 import Scorecard from "./pages/scorecard.jsx";
 import Rankings from "./pages/Rankings.jsx";
 import "./App.css";
-
+import React from "react";
 const theme = createTheme({
   colorScheme: 'light',
 });

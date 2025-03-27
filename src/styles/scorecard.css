@@ -229,12 +229,12 @@ th {
   }
 }
 
-/* Tabs styling */
+/* Tabs styling
 .tabs-list {
   display: flex;
   justify-content: center;
   gap: 10px;
-}
+} */
 
 .tab {
   font-size: 14px;

@@ -9,7 +9,7 @@ import nzImg from '../assets/new-zealand.webp';
 import pakImg from '../assets/pakistan.webp';
 import saImg from '../assets/south-africa.webp';
 import { useNavigate } from 'react-router-dom';
-
+import React from 'react';
 const getTeamLogo = (teamName) => {
   const teamLogos = {
     india: indImage,

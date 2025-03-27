@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { fetchStats } from "../API/api.js";
 import "../styles/Status.css";
-
+import React from "react";
 function Status({ type, format }) {
   const [stats, setStats] = useState(null);
   const [loading, setLoading] = useState(false);

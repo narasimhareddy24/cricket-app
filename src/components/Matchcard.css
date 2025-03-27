@@ -105,27 +105,28 @@
     margin-top: 10px;
     color: #a36501;
   }
- 
+
+/*  
 @media (max-width: 480px) {
     .match-card {
       width: 100%; /* Full width on mobile */
-      padding: 5px; /* Reduce padding for mobile */
-    }
+      /* padding: 5px; Reduce padding for mobile */
+    /* }
   
     .series-container {
       font-size: 10px; /* Smaller font size for mobile */
-    }
+    /* }
   
     .status-container {
       font-size: 12px; /* Smaller font size for mobile */
-    }
+    /* }
   
     .match-container {
       flex-direction: column; /* Stack team details vertically */
-      align-items: center;
+      /* align-items: center;
     }
   
     .score-container {
       justify-content: center; /* Center score on mobile */
-    }
-  }
+    /* } */
+  /* } */ 
